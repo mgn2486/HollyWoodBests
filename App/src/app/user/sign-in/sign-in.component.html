@@ -1,0 +1,35 @@
+<mat-card class="example-card">
+    <mat-card-header  color="primary">
+       <div mat-card-avatar class="example-header-image"></div>
+       <mat-card-title>Hollywood BET - System Login</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+     <div *ngIf="isLoginError" class="red-text center error-message">
+        <span style="font-size: 0.6em;">
+          <mat-icon class="red-icon">cancel</mat-icon> Incorrect username or password
+        </span>
+     </div>
+   <form [formGroup]="SignInForm" autocomplete="off" class="col-12 white" (ngSubmit)="OnSubmit(SignInForm)">
+
+     <div class="input-field-class">            
+       <mat-form-field>
+         <mat-label>User name</mat-label>      
+         <input matInput placeholder="email address" #username ngModel formControlName="username" (blur)="logValidationErrors()">
+         <mat-icon matPrefix>person_outline</mat-icon>
+         <mat-error *ngIf="formErrors.username"><b>{{formErrors.username}}</b></mat-error>
+       </mat-form-field>
+       
+       <mat-form-field> 
+         <mat-label>Account Password</mat-label>      
+         <input type="password" matInput  #password ngModel formControlName="password" placeholder="Password" (blur)="logValidationErrors()">
+         <mat-icon matPrefix>enhanced_encryption</mat-icon>
+         <mat-error *ngIf="formErrors.password"><b>{{formErrors.password}}</b></mat-error>
+       </mat-form-field>
+     </div>
+
+     <div class="row s12">
+       <button color="primary" [disabled]="!SignInForm.valid" mat-raised-button>Sign - In</button>
+     </div>
+   </form>
+   </mat-card-content>
+</mat-card>

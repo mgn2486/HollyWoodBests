@@ -1,0 +1,58 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Dev\\PracticeDev\\Vabereki\\Mr_Gee\\TournamentManagement\\Web_API\\TournamentData\\TournamentData.csproj": {}
+  },
+  "projects": {
+    "D:\\Dev\\PracticeDev\\Vabereki\\Mr_Gee\\TournamentManagement\\Web_API\\TournamentData\\TournamentData.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Dev\\PracticeDev\\Vabereki\\Mr_Gee\\TournamentManagement\\Web_API\\TournamentData\\TournamentData.csproj",
+        "projectName": "TournamentData",
+        "projectPath": "D:\\Dev\\PracticeDev\\Vabereki\\Mr_Gee\\TournamentManagement\\Web_API\\TournamentData\\TournamentData.csproj",
+        "packagesPath": "C:\\Users\\MasimbaN\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\PracticeDev\\Vabereki\\Mr_Gee\\TournamentManagement\\Web_API\\TournamentData\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "configFilePaths": [
+          "C:\\Users\\MasimbaN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net47"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://klondike.sahl.com:8087/api/odata": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net47": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net47": {
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

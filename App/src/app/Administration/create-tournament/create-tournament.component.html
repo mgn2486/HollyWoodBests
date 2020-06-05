@@ -1,0 +1,51 @@
+<div class="row">
+    <div class="col-sm-3">
+       <mat-card class="example-card">
+          <mat-card-header  color="primary">
+             <div mat-card-avatar class="example-header-image"></div>
+             <mat-card-title>Create New Tournament</mat-card-title>
+         </mat-card-header>
+         <mat-card-content>
+            <form [formGroup]="CreateTournamentForm" autocomplete="off" class="col-12 white" (ngSubmit)="OnSubmit(CreateTournamentForm)">
+                <div class="input-field-class">            
+                    <div class="row">
+                        <mat-form-field  class="col s4">
+                            <mat-label>Tournament Name</mat-label>
+                                <input matInput placeholder="Tournament Name" #tournamentName ngModel formControlName="tournamentName"  (blur)="logValidationErrors()">
+                            <mat-icon matPrefix>library_books</mat-icon>
+                            <mat-error *ngIf="formErrors.tournamentName"><b>{{formErrors.tournamentName}}</b></mat-error>
+                        </mat-form-field>
+                    </div>                  
+                    <div class="row s12">
+                        <button color="primary" [disabled]="!CreateTournamentForm.valid" mat-raised-button>Save-Tournament</button>
+                    </div>            
+                </div>
+            </form>
+          </mat-card-content>
+       </mat-card>
+    </div>
+
+    <div class="col-sm-9">
+       <h4>Recently Created - Tournaments</h4>
+       <hr>
+
+       <ol>
+           <li class="tournamentList" *ngFor="let tournament of tournamentList; let i = index">
+              <div class="row">
+                <div class="col-sm-2">
+                    {{tournament.Name}}
+                </div>
+                <div class="col-sm-1">
+                    <button mat-raised-button color="accent">Update</button>
+                </div>
+                <div class="col-sm-1">
+                    <button mat-raised-button color="warn" (click)="delete(tournament.Id)" >Delete</button>
+                </div>
+              </div>
+              <hr>
+           </li>
+       </ol>        
+    </div>
+</div>
+
+        

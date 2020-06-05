@@ -1,0 +1,25 @@
+<mat-toolbar>
+    <div fxHide.gt-xs>
+        <button mat-icon-button [matMenuTriggerFor]="aboveMenu">
+            <mat-icon>menu</mat-icon><span style="font-size: 20px; margin-left: 10px;"><b>Tournament List</b></span>
+        </button>
+        <mat-menu #aboveMenu="matMenu" yPosition="below">
+            <span *ngFor="let tournament of tournamentNames">
+                <button  mat-menu-item [routerLink]="['/tournaments', tournament.name]">{{tournament.name}}</button>
+            </span>          
+        </mat-menu>
+    </div>
+    <div fxFlex fxLayout  fxHide.xs>
+        <ul fxLayout fxLayoutGap="5px" class="navigation-items" style="list-style-type:none">
+            <div class="row">
+                <li class="col-sm-3 col-md-3 col-lg-3">
+                    <button mat-raised-button style="margin: 10px;" color="primary" [routerLink]="['/tournaments', 'all']">All-Events</button>
+                </li>
+                <li *ngFor="let tournament of tournamentNames"  class="col-sm-3 col-md-3 col-lg-3">
+                    <button mat-raised-button style="margin: 10px;" color="primary" [routerLink]="['/tournaments', tournament.name]">{{tournament.name}}</button>
+                </li>
+            </div>
+        </ul>
+        <hr>
+    </div>
+</mat-toolbar>

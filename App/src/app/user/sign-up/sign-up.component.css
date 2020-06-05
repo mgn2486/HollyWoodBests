@@ -1,0 +1,30 @@
+.input-field-class {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .example-container > * {
+    width: 100%;
+  }
+
+.login-icon{
+  margin-left: 10px;
+}
+
+.icon-section{
+  margin-right: 10px;
+}
+
+::ng-deep .mat-card-header{
+  background-color: #431daa !important;
+  color: white;
+  padding:5px !important;
+}
+
+::ng-deep .mat-card{
+  padding:0 !important;
+}
+
+::ng-deep .mat-card-content{
+  padding:5px !important;
+}

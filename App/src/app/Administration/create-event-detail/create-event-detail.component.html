@@ -1,0 +1,49 @@
+<div class="row">
+    <div class="col-lg">
+       <mat-card class="example-card">
+          <mat-card-header  color="primary">
+             <div mat-card-avatar class="example-header-image"></div>
+             <mat-card-title>Create New Event</mat-card-title>
+         </mat-card-header>
+         <mat-card-content>
+            <form [formGroup]="CreateEventForm" autocomplete="off" class="col-12 white" (ngSubmit)="OnSubmit(CreateEventForm)">
+                <div class="input-field-class">            
+                    <div class="row">
+                        <mat-form-field  class="col s4">
+                            <mat-label>Tournament Name</mat-label>
+                                <div class="dropdown">
+                                    <input id="checkbox1" type="checkbox" name="checkbox" checked />
+                                    <label for="checkbox1">
+                                        <div class="drop-ttl">Dropdown</div>
+                                        <ul>
+                                            <li><a>First</a></li>
+                                            <li>Second</li>
+                                            <li>Third</li>
+                                            <li>Fourth</li>
+                                        </ul>
+                                    </label>
+                                </div>
+                            <mat-icon matPrefix>library_books</mat-icon>
+                            <mat-error *ngIf="formErrors.tournamentName"><b>{{formErrors.tournamentName}}</b></mat-error>
+                        </mat-form-field>
+                    </div>                  
+                    <div class="row s12">
+                        <button color="primary" [disabled]="!CreateEventForm.valid" mat-raised-button>Create-Tournament</button>
+                    </div>            
+                </div>
+            </form>
+          </mat-card-content>
+       </mat-card>
+    </div>
+
+    <div class="col-lg">
+       <h4>Recently Created - Events</h4>
+       <hr>
+       <ol>
+           <li><a>Vaal</a></li>
+           <li><a>Jockey-2013</a></li>
+       </ol>        
+    </div>
+</div>
+
+        

@@ -1,0 +1,38 @@
+<div class="row">
+   <div class="col-lg">
+      <h5> Welcome: {{firstName}} {{lastName}} {{initials}} </h5>
+   </div>
+</div>
+<mat-toolbar color="primary">
+  <div fxHide.gt-xs>
+      <button mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon>menu</mat-icon>
+      </button>
+  </div>
+  
+  <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
+      <ul fxLayout fxLayoutGap="15px" class="navigation-items">
+        <li *ngIf="userService.roleMatch(['SuperAdmin'])">
+           <a routerLink="create-tournament" routerLinkActive="active" >Create-Tournament</a>
+        </li>
+        <li *ngIf="userService.roleMatch(['SuperAdmin', 'Admin', 'Member'])">
+            <a routerLink="all-tournaments" routerLinkActive="active" >All-Tournaments</a>
+        </li>
+        <li *ngIf="userService.roleMatch(['SuperAdmin', 'Admin'])">
+           <a routerLink="create-event" routerLinkActive="active" >Create-Events</a>
+        </li>
+        <li *ngIf="userService.roleMatch(['SuperAdmin', 'Admin', 'Member'])">
+           <a routerLink="all-events" routerLinkActive="active" >All-Events</a>
+        </li>
+        <li *ngIf="userService.roleMatch(['Member'])">
+            <a routerLink="create-event-details" routerLinkActive="active" >Register-Event</a>
+        </li>
+      </ul>
+  </div>
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+        <button mat-icon-button><mat-icon matPrefix (click)="onLogout()" >power_settings_new</mat-icon></button>
+  </div>
+</mat-toolbar>
+<br>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\bin\Debug\TournamentData.dll
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\bin\Debug\TournamentData.pdb
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\bin\Debug\EntityFramework.SqlServer.dll
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\bin\Debug\EntityFramework.dll
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.csproj.CopyComplete
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.dll
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.pdb
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.Migrations.Initial_Tournament_Data.resources
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.csproj.GenerateResource.cache
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.Migrations.Tournament_Data_Models.resources
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.Migrations.Updated_Tournament_Data_Models.resources
+D:\Dev\PracticeDev\Vabereki\Mr_Gee\TournamentManagement\Web_API\TournamentData\obj\Debug\TournamentData.csprojAssemblyReference.cache

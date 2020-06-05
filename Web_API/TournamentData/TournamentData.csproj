@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{55230DD0-BC68-4FB0-8779-0A06D30B0F1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TournamentData</RootNamespace>
+    <AssemblyName>TournamentData</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\EventsCommand\CreateEventCommand.cs" />
+    <Compile Include="Commands\EventsCommand\EventDataRepository.cs" />
+    <Compile Include="Commands\TournamentCommand\DeleteTournamentCommand.cs" />
+    <Compile Include="DomainModels\TournamentEvent.cs" />
+    <Compile Include="DomainModels\Tournament.cs" />
+    <Compile Include="ApplicationTypes\ICommand.cs" />
+    <Compile Include="ApplicationTypes\IDataModel.cs" />
+    <Compile Include="ApplicationTypes\IDataRepository.cs" />
+    <Compile Include="ApplicationTypes\IQuery.cs" />
+    <Compile Include="Enums\ApplicationResponseMessagesEnum.cs" />
+    <Compile Include="Migrations\202006041347252_Tournament_Data_Models.cs" />
+    <Compile Include="Migrations\202006041347252_Tournament_Data_Models.designer.cs">
+      <DependentUpon>202006041347252_Tournament_Data_Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202006041521419_Updated_Tournament_Data_Models.cs" />
+    <Compile Include="Migrations\202006041521419_Updated_Tournament_Data_Models.designer.cs">
+      <DependentUpon>202006041521419_Updated_Tournament_Data_Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SystemMessages\ISystemResponseMessages.cs" />
+    <Compile Include="Commands\TournamentCommand\CreateTournamentCommand.cs" />
+    <Compile Include="Commands\TournamentCommand\TournamentDataRespository.cs" />
+    <Compile Include="ITournamentDomainClient.cs" />
+    <Compile Include="SystemMessages\SystemResponseMessages.cs" />
+    <Compile Include="TournamentDomainClient.cs" />
+    <Compile Include="Managers\Context\TournamentDbContext.cs" />
+    <Compile Include="Migrations\202006040848198_Initial_Tournament_Data.cs" />
+    <Compile Include="Migrations\202006040848198_Initial_Tournament_Data.designer.cs">
+      <DependentUpon>202006040848198_Initial_Tournament_Data.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Managers\Models\EventDetailModel.cs" />
+    <Compile Include="Managers\Models\EventDetailStatusModel.cs" />
+    <Compile Include="Managers\Models\EventModel.cs" />
+    <Compile Include="Managers\Models\TournamentModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202006040848198_Initial_Tournament_Data.resx">
+      <DependentUpon>202006040848198_Initial_Tournament_Data.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006041347252_Tournament_Data_Models.resx">
+      <DependentUpon>202006041347252_Tournament_Data_Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202006041521419_Updated_Tournament_Data_Models.resx">
+      <DependentUpon>202006041521419_Updated_Tournament_Data_Models.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EntityFramework">
+      <Version>6.4.4</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Queries\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

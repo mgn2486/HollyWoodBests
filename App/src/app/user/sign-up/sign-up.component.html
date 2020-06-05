@@ -1,0 +1,73 @@
+<mat-card class="example-card">
+  <mat-card-header  color="primary">
+     <div mat-card-avatar class="example-header-image"></div>
+     <mat-card-title>Hollywood BET - System Registration</mat-card-title>
+ </mat-card-header>
+ <!-- <img mat-card-image src="assets/images/home/home_2.jpg" alt="Photo of a Shiba Inu"> -->
+ <mat-card-content>
+  <div *ngIf="isRegistrationError" class="red-text center error-message">
+      <i class="material-icons">error</i> Incorrect username or password
+  </div>
+  <form [formGroup]="SignUpForm" autocomplete="off" class="col-12 white" (ngSubmit)="OnSubmit(SignUpForm)">
+     <div class="input-field-class">
+
+       <div class="row">
+         <mat-form-field  class="col s4">
+           <mat-label>First name</mat-label>
+           <input matInput placeholder="First Name" #firstName ngModel formControlName="firstName"  (blur)="logValidationErrors()">
+           <mat-icon matPrefix>person_outline</mat-icon>
+           <mat-error *ngIf="formErrors.firstName"><b>{{formErrors.firstName}}</b></mat-error>
+         </mat-form-field>
+         <mat-form-field class="col s4">
+           <mat-label>Last name</mat-label>
+           <input matInput placeholder="Last Name" #lastName ngModel formControlName="lastName" (blur)="logValidationErrors()">
+           <mat-icon matPrefix>person_outline</mat-icon>
+           <mat-error *ngIf="formErrors.lastName"><b>{{formErrors.lastName}}</b></mat-error>
+         </mat-form-field>
+       </div>
+
+       <div class="row">
+         <mat-form-field  class="col s4">
+           <mat-label>Initials</mat-label>    
+           <input matInput placeholder="Initials" #Initials ngModel formControlName="initials">
+           <mat-icon matPrefix>person_outline</mat-icon>
+         </mat-form-field>
+       </div>
+
+       <div class="row">
+         <mat-form-field class="col s4">
+           <mat-label>Email Address</mat-label>      
+           <input matInput placeholder="Email address" #emailAddress ngModel formControlName="emailAddress" (blur)="logValidationErrors()">
+           <mat-icon matPrefix>mail</mat-icon>
+           <mat-error *ngIf="formErrors.emailAddress"><b>{{formErrors.emailAddress}}</b></mat-error>
+         </mat-form-field>
+       </div>
+
+       <div class="row">
+           <div formGroupName="passwordGroup">
+             <mat-form-field  class="col s4">
+               <mat-label>Account Password</mat-label> 
+               <input type="password" matInput placeholder="Password" #password ngModel formControlName="password" (blur)="logValidationErrors()">
+               <mat-icon matPrefix>enhanced_encryption</mat-icon>
+               <mat-error *ngIf="formErrors.password"><b>{{formErrors.password}}</b></mat-error>
+             </mat-form-field> 
+             <mat-form-field class="col s4">
+               <mat-label>Confirm Password</mat-label> 
+               <input type="password" matInput placeholder="Confirm-Password" #confirmPassword ngModel formControlName="confirmPassword" (blur)="logValidationErrors()">
+               <mat-icon matPrefix>enhanced_encryption</mat-icon>
+               <mat-error *ngIf="formErrors.passwordGroup || formErrors.confirmPassword">
+                 <b>{{formErrors.passwordGroup ? formErrors.passwordGroup : formErrors.confirmPassword}}</b>
+               </mat-error>
+             </mat-form-field>
+           </div>
+       </div>
+
+       <div class="row s12">
+         <button color="primary" [disabled]="!SignUpForm.valid" mat-raised-button>Sign - UP</button>
+       </div>
+  
+     </div>
+  </form>
+</mat-card-content>
+</mat-card>
+  

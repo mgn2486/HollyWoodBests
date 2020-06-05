@@ -1,0 +1,80 @@
+[
+    {
+        "tournamentName": "Jockey-2013",        
+		"eventName": "Race",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"Ninja Warrior",
+        "eventDetailNumber":4,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    },
+    {
+        "tournamentName": "Jockey-2013",        
+		"eventName": "Race",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"Gailpoli",
+        "eventDetailNumber":3,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    },
+    {
+        "tournamentName": "Vaal",        
+		"eventName": "Race",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"Royal Stock",
+        "eventDetailNumber":1,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    },
+    {
+        "tournamentName": "Vaal",        
+		"eventName": "Race",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"Scientist",
+        "eventDetailNumber":2,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    },
+    {
+        "tournamentName": "Greyville-2020",        
+		"eventName": "Race",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"Ghost",
+        "eventDetailNumber":2,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    },
+	{
+        "tournamentName": "Greyville-2020",        
+		"eventName": "Boxing",
+        "eventNumber": "1",
+        "eventStartDate": "01/06/2020",
+        "eventEndDate": "16/06/2020",
+        "eventDetailName":"MrGee",
+        "eventDetailNumber":2,
+        "eventDetailOdd":"0.54",
+        "finishPosition":"1",
+        "firstTime":1,
+        "eventStatus":"Active"
+    }
+]
